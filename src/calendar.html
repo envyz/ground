@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html class="ie9 no-focus"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-focus"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Ground</title>
+<!-- #include virtual="/assets/include/head-meta.html" -->
+<link rel="stylesheet" href="/assets/js/plugins/fullcalendar/fullcalendar.min.css">
+<!-- #include virtual="/assets/include/head-css.html" -->
+</head>
+
+<body>
+<div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed"> <!-- sidebar-mini -->
+	<!-- include : side-overlay -->	
+	<!-- #include virtual="/assets/include/side-overlay.html" -->
+	<!-- //include : side-overlay -->
+
+	<!-- include : sidebar -->	
+	<!-- #include virtual="/assets/include/sidebar.html" -->
+	<!-- //include : sidebar -->
+
+	<!-- include : header-navbar -->
+	<!-- #include virtual="/assets/include/header-navbar.html" -->
+	<!-- //include : header-navbar -->
+
+	<!-- main-container -->
+	<main id="main-container">
+		<!-- Page Header -->
+		<div class="content bg-gray-lighter">
+			<div class="row items-push">
+				<div class="col-sm-8">
+					<h1 class="page-heading">
+						Calendar <small>A solid foundation to build your calendar based web application. Powered by Full Calendar.</small>
+					</h1>
+				</div>
+				<div class="col-sm-4 text-right hidden-xs">
+					<ol class="breadcrumb push-10-t">
+						<li>마이페이지</li>
+						<li><a class="link-effect" href="">일정</a></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<!-- END Page Header -->
+
+		<!-- Page Content -->
+		<div class="content bg-white">
+			<!-- Calendar and Events functionality (initialized in js/pages/base_comp_calendar.js), for more info and examples you can check out http://fullcalendar.io/ -->
+			<div class="row items-push">
+				<div class="js-calendar"></div>
+			</div>
+			<!-- END Calendar -->
+		</div>
+		<!-- END Page Content -->
+	</main>
+	<!-- //main-container -->
+
+	<!-- include : page-footer -->
+	<!-- #include virtual="/assets/include/page-footer.html" -->
+	<!-- //include : page-footer -->
+</div>
+
+<!-- include : apps-modal -->
+<!-- #include virtual="/assets/include/apps-modal.html" -->
+<!-- //include : apps-modal -->
+
+<!-- include : floor-js -->
+<!-- #include virtual="/assets/include/floor-js.html" -->
+<!-- //include : floor-js -->
+
+<!-- Page Plugins -->
+<script src="/assets/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="/assets/js/plugins/fullcalendar/moment.min.js"></script>
+<script src="/assets/js/plugins/fullcalendar/fullcalendar.min.js"></script>
+<script src="/assets/js/plugins/fullcalendar/gcal.min.js"></script>
+
+<!-- Page JS Code -->
+<script src="/assets/js/pages/base_comp_calendar.js"></script>
+</body>
+</html>
