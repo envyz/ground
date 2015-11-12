@@ -1,0 +1,23 @@
+{
+  "name": "ground",
+  "version": "1.0.0",
+  "description": "envyz work share",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/envyz/ground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/envyz/ground/issues"
+  },
+  "homepage": "https://github.com/envyz/ground#readme"
+}
