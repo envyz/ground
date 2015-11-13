@@ -8,7 +8,7 @@ body {
 }
 body {
   font-family: "Noto Sans Regular","맑은 고딕","Malgun Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   color: #646464;
   background-color: #f5f5f5;
 }
@@ -1679,7 +1679,7 @@ a.list-group-item:focus {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 12px 10px;
+  padding: 8px 6px;
   border-top: 1px solid #f0f0f0;
 }
 .table > thead > tr > th,
@@ -1687,7 +1687,7 @@ a.list-group-item:focus {
 .table > tfoot > tr > th {
   padding: 16px 10px 12px;
   font-family: "Source Sans Pro", "Noto Sans Regular","맑은 고딕","Malgun Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
 }

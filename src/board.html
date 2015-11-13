@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html class="ie9 no-focus"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-focus"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Ground</title>
+<!-- #include virtual="/assets/include/head-meta.html" -->
+<!-- #include virtual="/assets/include/head-css.html" -->
+</head>
+
+<body>
+<div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed"> <!-- sidebar-mini -->
+	<!-- include : side-overlay -->	
+	<!-- #include virtual="/assets/include/side-overlay.html" -->
+	<!-- //include : side-overlay -->
+
+	<!-- include : sidebar -->	
+	<!-- #include virtual="/assets/include/sidebar.html" -->
+	<!-- //include : sidebar -->
+
+	<!-- include : header-navbar -->
+	<!-- #include virtual="/assets/include/header-navbar.html" -->
+	<!-- //include : header-navbar -->
+
+	<!-- Main Container -->
+	<main id="main-container">
+		<!-- Page Header -->
+		<div class="content bg-gray-lighter">
+			<div class="row items-push">
+				<div class="col-sm-7">
+					<h1 class="page-heading">
+						Responsive Tables <small>Mobile friendly tables that work across all screen sizes.</small>
+					</h1>
+				</div>
+				<div class="col-sm-5 text-right hidden-xs">
+					<ol class="breadcrumb push-10-t">
+						<li>Tables</li>
+						<li><a class="link-effect" href="">Responsive</a></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<!-- END Page Header -->
+
+		<!-- Page Content -->
+		<div class="content">
+			<!-- Partial Table -->
+			<div class="block">
+				<div class="block-header">
+					<h3 class="block-title">Partial Table</h3>
+				</div>
+				<div class="block-content">
+					<p>The second way is to use specific CSS classes for hiding columns in various screen resolutions. This way you can hide the less important columns and keep the most valuable on mobiles. At the following example the <strong>Access</strong> column isn't visible on small and extra small screens and <strong>Email</strong> column isn't visible on extra small screens.</p>
+					<table class="table table-striped table-vcenter js-dataTable-full">
+						<thead>
+							<tr>
+								<th class="text-center" style="width: 70px;"><i class="si si-user"></i></th>
+								<th style="width: 21%;">상태</th>
+								<th>Key</th>
+								<th class="hidden-xs" style="width: 40%;">Summery</th>
+								<th class="text-center" style="width: 100px;">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="text-center">
+									<img class="img-avatar img-avatar32" src="/assets/img/avatars/avatar16.jpg" alt="">
+								</td>
+								<td>
+									<span class="label label-success hidden-xs">GP</span>
+									<span class="label label-danger hidden-xs">BC</span>
+									<span class="label label-warning">IN PROGRESS</span>
+								</td>
+								<td class="font-w600"><a href="https://jira.ebaykorea.com/browse/WPR-1004">WPR-1004</a></td>
+								<td class="hidden-xs">[글로벌]장바구니>해외배송비 프로모션 배너노출 요청</td>
+								<td class="text-center">
+									<div class="btn-group" role="group">
+										<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+											<i class="si si-wrench"></i>
+										</button>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li class="dropdown-header"><a href="#">상세보기</a></li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">3</span>News</a>
+											</li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">1</span>Messages</a>
+											</li>
+											<li class="divider"></li>
+											<li class="dropdown-header">More</li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)">Edit Profile..</a>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- END Partial Table -->
+		</div>
+		<!-- END Page Content -->
+	</main>
+	<!-- END Main Container -->
+
+	<!-- include : page-footer -->
+	<!-- #include virtual="/assets/include/page-footer.html" -->
+	<!-- //include : page-footer -->
+</div>
+
+<!-- include : apps-modal -->
+<!-- #include virtual="/assets/include/apps-modal.html" -->
+<!-- //include : apps-modal -->
+
+<!-- include : floor-js -->
+<!-- #include virtual="/assets/include/floor-js.html" -->
+<!-- //include : floor-js -->
+
+<!-- Page JS Plugins -->
+<script src="/assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+
+<!-- Page JS Code -->
+<script src="/assets/js/pages/base_tables_datatables.js"></script>
+</body>
+</html>

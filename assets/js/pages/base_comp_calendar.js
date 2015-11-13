@@ -69,8 +69,8 @@ var BaseCompCalendar = function() {
             editable: true,
             droppable: true,
             header: {
-                left: 'title, today',
-                right: 'prev,next month,agendaWeek'
+                left: 'title',
+                right: 'prev,next today,agendaWeek,month'
             },
             drop: function($date, $allDay) { // this function is called when something is dropped
                 // retrieve the dropped element's stored Event Object
