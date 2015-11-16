@@ -139,14 +139,14 @@ h6,
 }
 .page-heading {
   color: #545454;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 400;
 }
 .page-heading small {
   margin-top: 5px;
   display: block;
   color: #777;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 300;
   line-height: 1.4;
 }
@@ -10889,3 +10889,7 @@ div.tagsinput span.tag a:hover {
 .placeholder {
   color: #aaa;
 }
+
+
+
+#main-container{background:#ffe5e5 !important}
