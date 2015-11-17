@@ -25,7 +25,7 @@ var BasePagesDashboard = function() {
                     pointStrokeColor: '#fff',
                     pointHighlightFill: '#fff',
                     pointHighlightStroke: 'rgba(44, 52, 63, 1)',
-                    data: [34, 42, 40, 65, 48, 56, 80]
+                    data: [8.10, 9, 10, 8, 8.20, 0, 0]
                 },
                 {
                     label: 'Last Week',
@@ -35,7 +35,7 @@ var BasePagesDashboard = function() {
                     pointStrokeColor: '#fff',
                     pointHighlightFill: '#fff',
                     pointHighlightStroke: 'rgba(44, 52, 63, 1)',
-                    data: [18, 19, 20, 35, 23, 28, 50]
+                    data: [18.10, 19, 20, 18, 18.20, 0, 0]
                 }
             ]
         };

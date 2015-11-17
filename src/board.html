@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <title>Ground</title>
 <!-- #include virtual="/assets/include/head-meta.html" -->
+<link rel="stylesheet" href="/assets/js/plugins/datatables/jquery.dataTables.min.css">
 <!-- #include virtual="/assets/include/head-css.html" -->
 </head>
 
@@ -45,30 +46,263 @@
 		<!-- Page Content -->
 		<div class="content">
 			<!-- Partial Table -->
+			<div class="block-content block-content-full">
+				<div class="pull-right">
+					<button class="btn btn-primary" data-toggle="modal" data-target="#modal-large" type="button">Launch Modal</button>
+				</div>
+				<div class="pull-left">
+					<div class="btn-group">
+						<button class="btn btn-default btn-image dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+							<img src="/assets/img/avatars/avatar10.jpg" alt="Avatar">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li class="dropdown-header">Profile</li>
+							<!-- <li>
+								<a tabindex="-1" href="base_pages_inbox.html">
+									<i class="si si-envelope-open pull-right"></i>
+									<span class="badge badge-primary pull-right">3</span>Inbox
+								</a>
+							</li> -->
+							<li>
+								<a tabindex="-1" href="base_pages_profile.html">
+									<i class="si si-user pull-right"></i>
+									<span class="badge badge-success pull-right">1</span>Print
+								</a>
+							</li>
+							<li>
+								<a tabindex="-1" href="javascript:void(0)">
+									<i class="si si-settings pull-right"></i>Settings
+								</a>
+							</li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Actions</li>
+							<li>
+								<a tabindex="-1" href="lock.html">
+									<i class="si si-lock pull-right"></i>계정잠금
+								</a>
+							</li>
+							<li>
+								<a tabindex="-1" href="login.html">
+									<i class="si si-logout pull-right"></i>로그아웃
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<button class="btn btn-primary" type="button"><i class="fa fa-print"></i> Print</button>
+				<button class="btn btn-primary" type="button"><i class="fa fa-file-pdf-o"></i> PDF</button>
+				<button class="btn btn-primary" type="button"><i class="fa fa-file-excel-o"></i> Excel</button>
+			</div>
 			<div class="block">
 				<div class="block-content">
-					<table class="table table-striped table-vcenter js-dataTable-full">
+					<table class="table table-hover table-condensed table-vcenter js-dataTable-full">
 						<thead>
 							<tr>
-								<th class="text-center" style="width: 70px;"><i class="si si-user"></i></th>
-								<th style="width: 21%;">상태</th>
+								<th class="text-center"><i class="si si-user"></i></th>
+								<th class="hidden-xs">분류</th>
+								<th class="hidden-xs">타입</th>
+								<th>상태</th>
 								<th>Key</th>
-								<th class="hidden-xs" style="width: 40%;">Summery</th>
-								<th class="text-center" style="width: 100px;">Actions</th>
+								<th>Time</th>
+								<th class="text-center">Actions</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td class="text-center">
-									<img class="img-avatar img-avatar32" src="/assets/img/avatars/avatar16.jpg" alt="">
+									<img class="img-avatar img-avatar32" src="/assets/img/avatars/avatar1.jpg" alt="">
 								</td>
-								<td>
-									<span class="label label-success hidden-xs">GP</span>
-									<span class="label label-danger hidden-xs">BC</span>
-									<span class="label label-warning">IN PROGRESS</span>
+								<td class="hidden-xs"><span class="label label-gp">GP</span></td>
+								<td class="hidden-xs"><span class="label label-bc">BC</span></td>
+								<td><span class="label label-open">OPEN</span></td>
+								<td class="font-w600">
+									<a href="https://jira.ebaykorea.com/browse/WPR-1004">
+										WPR-1004
+										<span class="hidden-xs">[글로벌]장바구니>해외배송비 프로모션 배너노출 요청</span>
+									</a>
 								</td>
-								<td class="font-w600"><a href="https://jira.ebaykorea.com/browse/WPR-1004">WPR-1004</a></td>
-								<td class="hidden-xs">[글로벌]장바구니>해외배송비 프로모션 배너노출 요청</td>
+								<td>1.5d</td>
+								<td class="text-center">
+									<div class="btn-group" role="group">
+										<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+											<i class="glyphicon glyphicon-option-horizontal"></i>
+										</button>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li class="dropdown-header"><a href="#">상세보기</a></li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">3</span>News</a>
+											</li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">1</span>Messages</a>
+											</li>
+											<li class="divider"></li>
+											<li class="dropdown-header">More</li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)">Edit Profile..</a>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<img class="img-avatar img-avatar32" src="/assets/img/avatars/avatar1.jpg" alt="">
+								</td>
+								<td class="hidden-xs"><span class="label label-gg">GG</span></td>
+								<td class="hidden-xs"><span class="label label-bc">BC</span></td>
+								<td><span class="label label-reopen">REOPEN</span></td>
+								<td class="font-w600">
+									<a href="https://jira.ebaykorea.com/browse/WPR-1004">
+										WPR-1004
+										<span class="hidden-xs">[글로벌]장바구니>해외배송비 프로모션 배너노출 요청</span>
+									</a>
+								</td>
+								<td>1.5d</td>
+								<td class="text-center">
+									<div class="btn-group" role="group">
+										<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+											<i class="glyphicon glyphicon-option-horizontal"></i>
+										</button>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li class="dropdown-header"><a href="#">상세보기</a></li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">3</span>News</a>
+											</li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">1</span>Messages</a>
+											</li>
+											<li class="divider"></li>
+											<li class="dropdown-header">More</li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)">Edit Profile..</a>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<img class="img-avatar img-avatar32" src="/assets/img/avatars/avatar1.jpg" alt="">
+								</td>
+								<td class="hidden-xs"><span class="label label-g9p">G9P</span></td>
+								<td class="hidden-xs"><span class="label label-dr">DR</span></td>
+								<td><span class="label label-progress">IN PROGRESS</span></td>								
+								<td class="font-w600">
+									<a href="https://jira.ebaykorea.com/browse/WPR-1004">
+										WPR-1004
+										<span class="hidden-xs">[글로벌]장바구니>해외배송비 프로모션 배너노출 요청</span>
+									</a>
+								</td>
+								<td>1.5d</td>
+								<td class="text-center">
+									<div class="btn-group" role="group">
+										<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+											<i class="glyphicon glyphicon-option-horizontal"></i>
+										</button>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li class="dropdown-header"><a href="#">상세보기</a></li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">3</span>News</a>
+											</li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">1</span>Messages</a>
+											</li>
+											<li class="divider"></li>
+											<li class="dropdown-header">More</li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)">Edit Profile..</a>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<img class="img-avatar img-avatar32" src="/assets/img/avatars/avatar1.jpg" alt="">
+								</td>
+								<td class="hidden-xs"><span class="label label-g9p">G9P</span></td>
+								<td class="hidden-xs"><span class="label label-dr">DR</span></td>
+								<td><span class="label label-resolved">RESOLVED</span></td>
+								<td class="font-w600">
+									<a href="https://jira.ebaykorea.com/browse/WPR-1004">
+										WPR-1004
+										<span class="hidden-xs">[글로벌]장바구니>해외배송비 프로모션 배너노출 요청</span>
+									</a>
+								</td>
+								<td>1.5d</td>
+								<td class="text-center">
+									<div class="btn-group" role="group">
+										<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+											<i class="glyphicon glyphicon-option-horizontal"></i>
+										</button>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li class="dropdown-header"><a href="#">상세보기</a></li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">3</span>News</a>
+											</li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">1</span>Messages</a>
+											</li>
+											<li class="divider"></li>
+											<li class="dropdown-header">More</li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)">Edit Profile..</a>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<img class="img-avatar img-avatar32" src="/assets/img/avatars/avatar1.jpg" alt="">
+								</td>
+								<td class="hidden-xs"><span class="label label-g9p">G9P</span></td>
+								<td class="hidden-xs"><span class="label label-dr">DR</span></td>
+								<td><span class="label label-closed">CLOSED</span></td>
+								<td class="font-w600">
+									<a href="https://jira.ebaykorea.com/browse/WPR-1004">
+										WPR-1004
+										<span class="hidden-xs">[글로벌]장바구니>해외배송비 프로모션 배너노출 요청</span>
+									</a>
+								</td>
+								<td>1.5d</td>
+								<td class="text-center">
+									<div class="btn-group" role="group">
+										<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+											<i class="glyphicon glyphicon-option-horizontal"></i>
+										</button>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li class="dropdown-header"><a href="#">상세보기</a></li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">3</span>News</a>
+											</li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">1</span>Messages</a>
+											</li>
+											<li class="divider"></li>
+											<li class="dropdown-header">More</li>
+											<li>
+												<a tabindex="-1" href="javascript:void(0)">Edit Profile..</a>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<img class="img-avatar img-avatar32" src="/assets/img/avatars/avatar1.jpg" alt="">
+								</td>
+								<td class="hidden-xs"><span class="label label-g9p">G9P</span></td>
+								<td class="hidden-xs"><span class="label label-dr">DR</span></td>
+								<td><span class="label label-etc">ETC</span></td>
+								<td class="font-w600">
+									<a href="https://jira.ebaykorea.com/browse/WPR-1004">
+										WPR-1004
+										<span class="hidden-xs">[글로벌]장바구니>해외배송비 프로모션 배너노출 요청</span>
+									</a>
+								</td>
+								<td>1.5d</td>
 								<td class="text-center">
 									<div class="btn-group" role="group">
 										<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -109,6 +343,32 @@
 <!-- include : apps-modal -->
 <!-- #include virtual="/assets/include/apps-modal.html" -->
 <!-- //include : apps-modal -->
+
+<!-- Large Modal -->
+<div class="modal" id="modal-large" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="block block-themed block-transparent remove-margin-b">
+				<div class="block-header bg-primary-dark">
+					<ul class="block-options">
+						<li>
+							<button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
+						</li>
+					</ul>
+					<h3 class="block-title">신규작성</h3>
+				</div>
+				<div class="block-content">
+					
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
+				<button class="btn btn-sm btn-primary" type="button" data-dismiss="modal"><i class="fa fa-check"></i> Ok</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END Large Modal -->
 
 <!-- include : floor-js -->
 <!-- #include virtual="/assets/include/floor-js.html" -->
