@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed"> <!-- sidebar-mini -->
+<div id="page-container" class="sidebar-l sidebar-o side-scroll sidebar-mini">
 	<!-- include : side-overlay -->	
 	<!-- #include virtual="/assets/include/side-overlay.html" -->
 	<!-- //include : side-overlay -->
@@ -47,64 +47,48 @@
 		<div class="content">
 			<!-- Partial Table -->
 			<div class="block-content block-content-full">
-				<div class="pull-right">
-					<button class="btn btn-primary" data-toggle="modal" data-target="#modal-large" type="button">Launch Modal</button>
-				</div>
-				<div class="pull-left">
-					<div class="btn-group">
-						<button class="btn btn-default btn-image dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
-							<img src="/assets/img/avatars/avatar10.jpg" alt="Avatar">
-							<span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu dropdown-menu-right">
-							<li class="dropdown-header">Profile</li>
-							<!-- <li>
-								<a tabindex="-1" href="base_pages_inbox.html">
-									<i class="si si-envelope-open pull-right"></i>
-									<span class="badge badge-primary pull-right">3</span>Inbox
-								</a>
-							</li> -->
-							<li>
-								<a tabindex="-1" href="base_pages_profile.html">
-									<i class="si si-user pull-right"></i>
-									<span class="badge badge-success pull-right">1</span>Print
-								</a>
-							</li>
-							<li>
-								<a tabindex="-1" href="javascript:void(0)">
-									<i class="si si-settings pull-right"></i>Settings
-								</a>
-							</li>
-							<li class="divider"></li>
-							<li class="dropdown-header">Actions</li>
-							<li>
-								<a tabindex="-1" href="lock.html">
-									<i class="si si-lock pull-right"></i>계정잠금
-								</a>
-							</li>
-							<li>
-								<a tabindex="-1" href="login.html">
-									<i class="si si-logout pull-right"></i>로그아웃
-								</a>
-							</li>
-						</ul>
+				<div class="row">
+					<div class="pull-right">
+						<button class="btn btn-primary" data-toggle="modal" data-target="#modal-large" type="button">Launch Modal</button>
+					</div>
+					<div class="pull-left">
+						<div class="btn-group">
+							<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+								<i class="fa fa-download"></i> Export
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li>
+									<a tabindex="-1" href="javascript:void(0)">
+										<i class="fa fa-print"></i> Print
+									</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="javascript:void(0)">
+										<i class="fa fa-file-pdf-o"></i> PDF
+									</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="javascript:void(0)">
+										<i class="fa fa-file-excel-o"></i> Excel
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<button class="btn btn-primary" type="button"><i class="fa fa-print"></i> Print</button>
-				<button class="btn btn-primary" type="button"><i class="fa fa-file-pdf-o"></i> PDF</button>
-				<button class="btn btn-primary" type="button"><i class="fa fa-file-excel-o"></i> Excel</button>
 			</div>
 			<div class="block">
 				<div class="block-content">
-					<table class="table table-hover table-condensed table-vcenter js-dataTable-full">
+					<table class="table table-hover table-bordered table-condensed table-vcenter text-center js-dataTable-full">
 						<thead>
 							<tr>
 								<th class="text-center"><i class="si si-user"></i></th>
-								<th class="hidden-xs">분류</th>
-								<th class="hidden-xs">타입</th>
-								<th>상태</th>
-								<th>Key</th>
-								<th>Time</th>
+								<th class="text-center hidden-xs" style="width=62px">분류</th>
+								<th class="text-center hidden-xs" style="width=62px">타입</th>
+								<th class="text-center hidden-xs">상태</th>
+								<th class="text-center">업무내용</th>
+								<th class="text-center">Time</th>
 								<th class="text-center">Actions</th>
 							</tr>
 						</thead>
@@ -115,10 +99,10 @@
 								</td>
 								<td class="hidden-xs"><span class="label label-gp">GP</span></td>
 								<td class="hidden-xs"><span class="label label-bc">BC</span></td>
-								<td><span class="label label-open">OPEN</span></td>
-								<td class="font-w600">
+								<td class="hidden-xs"><span class="label label-open">OPEN</span></td>
+								<td class="font-w600 text-left">
 									<a href="https://jira.ebaykorea.com/browse/WPR-1004">
-										WPR-1004
+										1.WPR-1004
 										<span class="hidden-xs">[글로벌]장바구니>해외배송비 프로모션 배너노출 요청</span>
 									</a>
 								</td>
@@ -151,10 +135,10 @@
 								</td>
 								<td class="hidden-xs"><span class="label label-gg">GG</span></td>
 								<td class="hidden-xs"><span class="label label-bc">BC</span></td>
-								<td><span class="label label-reopen">REOPEN</span></td>
-								<td class="font-w600">
+								<td class="hidden-xs"><span class="label label-reopen">REOPEN</span></td>
+								<td class="font-w600 text-left">
 									<a href="https://jira.ebaykorea.com/browse/WPR-1004">
-										WPR-1004
+										2.WPR-1004
 										<span class="hidden-xs">[글로벌]장바구니>해외배송비 프로모션 배너노출 요청</span>
 									</a>
 								</td>
@@ -187,10 +171,10 @@
 								</td>
 								<td class="hidden-xs"><span class="label label-g9p">G9P</span></td>
 								<td class="hidden-xs"><span class="label label-dr">DR</span></td>
-								<td><span class="label label-progress">IN PROGRESS</span></td>								
-								<td class="font-w600">
+								<td class="hidden-xs"><span class="label label-progress">IN PROGRESS</span></td>								
+								<td class="font-w600 text-left">
 									<a href="https://jira.ebaykorea.com/browse/WPR-1004">
-										WPR-1004
+										3.WPR-1004
 										<span class="hidden-xs">[글로벌]장바구니>해외배송비 프로모션 배너노출 요청</span>
 									</a>
 								</td>
@@ -223,10 +207,10 @@
 								</td>
 								<td class="hidden-xs"><span class="label label-g9p">G9P</span></td>
 								<td class="hidden-xs"><span class="label label-dr">DR</span></td>
-								<td><span class="label label-resolved">RESOLVED</span></td>
-								<td class="font-w600">
+								<td class="hidden-xs"><span class="label label-resolved">RESOLVED</span></td>
+								<td class="font-w600 text-left">
 									<a href="https://jira.ebaykorea.com/browse/WPR-1004">
-										WPR-1004
+										4.WPR-1004
 										<span class="hidden-xs">[글로벌]장바구니>해외배송비 프로모션 배너노출 요청</span>
 									</a>
 								</td>
@@ -259,10 +243,10 @@
 								</td>
 								<td class="hidden-xs"><span class="label label-g9p">G9P</span></td>
 								<td class="hidden-xs"><span class="label label-dr">DR</span></td>
-								<td><span class="label label-closed">CLOSED</span></td>
-								<td class="font-w600">
+								<td class="hidden-xs"><span class="label label-closed">CLOSED</span></td>
+								<td class="font-w600 text-left">
 									<a href="https://jira.ebaykorea.com/browse/WPR-1004">
-										WPR-1004
+										5.WPR-1004
 										<span class="hidden-xs">[글로벌]장바구니>해외배송비 프로모션 배너노출 요청</span>
 									</a>
 								</td>
@@ -295,10 +279,10 @@
 								</td>
 								<td class="hidden-xs"><span class="label label-g9p">G9P</span></td>
 								<td class="hidden-xs"><span class="label label-dr">DR</span></td>
-								<td><span class="label label-etc">ETC</span></td>
-								<td class="font-w600">
+								<td class="hidden-xs"><span class="label label-etc">ETC</span></td>
+								<td class="font-w600 text-left">
 									<a href="https://jira.ebaykorea.com/browse/WPR-1004">
-										WPR-1004
+										6.WPR-1004
 										<span class="hidden-xs">[글로벌]장바구니>해외배송비 프로모션 배너노출 요청</span>
 									</a>
 								</td>
