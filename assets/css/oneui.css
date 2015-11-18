@@ -1630,7 +1630,7 @@ a.list-group-item:focus {
   padding: 10px;
 }
 .dropdown-menu {
-  min-width: 180px;
+  min-width: 140px;
   padding: 5px 0;
   border-color: #ddd;
   border-radius: 2px;
