@@ -1869,6 +1869,9 @@ a.list-group-item:focus {
   -webkit-transition: -webkit-transform 0.15s ease-out;
   transition: transform 0.15s ease-out;
 }
+.js-table-sections-header > tr > td:first-child {
+  border-left:2px solid #999;
+}
 .js-table-sections-header + tbody {
   display: none;
 }
@@ -1882,6 +1885,13 @@ a.list-group-item:focus {
 }
 .js-table-sections-header.open + tbody {
   display: table-row-group;
+}
+
+.js-table-sections-header.open > tr > td:first-child {
+  border-left:2px solid #ff6b6b;
+}
+.js-table-sections-header.open + tbody > tr > td:first-child {
+  border-left:2px solid #ff6b6b;
 }
 .modal.fade .modal-dialog {
   -webkit-transition: all 0.12s ease-out;

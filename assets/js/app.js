@@ -52,6 +52,11 @@ var App = function() {
             e.preventDefault();
             jQuery(this).tab('show');
         });
+        jQuery('[data-toggle="inputTabs"] input').click(function(e){
+            e.preventDefault();
+            console.log("AA");
+            jQuery(this).tab('show');
+        });
 
         // Init form placeholder (for IE9)
         jQuery('.form-control').placeholder();
