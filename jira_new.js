@@ -1,6 +1,6 @@
 var https = require("https"),
 		cheerio = require("cheerio");
-var issue = "17065",
+var issue = "17718",
 		username = "envyz710",
 		password = "envyz111)";
  
@@ -28,13 +28,14 @@ var request = https.request(options, function (response) {
 		$("item").each(function () {
 			console.log("key: ", $(this).find('key').text());      
 			console.log("summary: ", $(this).find('summary').text());
-			console.log("type: ", $(this).find('type').text(), " : ", $(this).find('parent').text());
+			console.log("link: ", $(this).find('link').text());
+			console.log("type: ", $(this).find('type').text());
 			console.log("priority: ", $(this).find('priority').text());
 			console.log("status: ", $(this).find('status').text());
 			console.log("assignee: ", $(this).find('assignee').text());
 			console.log("reporter: ", $(this).find('reporter').text());
 			console.log("created: ", $(this).find('created').text());
-			console.log("updated: ", $(this).find('updated').text());
+			//console.log("updated: ", $(this).find('updated').text());
 			console.log("component: ", $(this).find('component').text());
 			console.log("timespent: ", $(this).find('timespent').text());
 			// json.key = $(this).find('key').text();
@@ -53,23 +54,5 @@ var request = https.request(options, function (response) {
 	});
 });
  
-
-// 2. 파일 생성
-// var fs = require('fs');
-
-// var file = 'list.json';
-// fs.open(file,'w',function(err,fd){
-// 	if (err) throw err;
-//  	console.log('file open complete');
-// });
-
-// 7.파일 이어서 쓰기
-// var fs = require('fs');
-
-// fs.appendFile('test1.txt', 'data to append', function (err) {
-//   if (err) throw err;
-//   console.log('The "data to append" was appended to file!');
-// });
-
 request.end();
 
