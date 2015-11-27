@@ -1,26 +1,10 @@
-var express = require("express"),
-	ssi		= require("ssi"),
-	path 	= require("path"),
-	fs 		= require("fs"),
-	app 	= express(),
-	
-	parser 		= new ssi(__dirname, "", "");
-	
-// Handle server side includes for html files
-app.use(function(req,res,next) {
-	var filename 	= __dirname+(req.path == "/" ? "/src/index.html" : req.path);
+var router = require("./router.js");
+var http = require('http');
 
-	//console.log(filename);
+http.createServer(function (request, response) {
+	router.home(request, response);
+	router.user(request, response);
+}).listen(3000, '127.0.0.1');
 
-	if(fs.existsSync(filename)) {
-		res.send(parser.parse(filename, fs.readFileSync(filename, {encoding: "utf8"})).contents);	
-	} else {
-		next();
-	}
-});
+console.log('Server running at http://<workspace-url>/');
 
-
-//app.listen(process.env.PORT || 3001)
-
-app.listen(5000);
-console.log("Server 5000");
