@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html class="ie9 no-focus"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-focus"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Ground</title>
+<!-- #include virtual="/assets/include/head-meta.html" -->
+<!-- Page JS Plugins CSS -->
+<link rel="stylesheet" href="/assets/js/plugins/bootstrap-datepicker/bootstrap-datepicker3.min.css">
+<link rel="stylesheet" href="/assets/js/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="/assets/js/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+<link rel="stylesheet" href="/assets/js/plugins/select2/select2.min.css">
+<link rel="stylesheet" href="/assets/js/plugins/select2/select2-bootstrap.min.css">
+<link rel="stylesheet" href="/assets/js/plugins/ion-rangeslider/css/ion.rangeSlider.min.css">
+<link rel="stylesheet" href="/assets/js/plugins/ion-rangeslider/css/ion.rangeSlider.skinHTML5.min.css">
+<link rel="stylesheet" href="/assets/js/plugins/dropzonejs/dropzone.min.css">
+<link rel="stylesheet" href="/assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.css">
+<!-- #include virtual="/assets/include/head-css.html" -->
+</head>
+
+<body>
+<div id="page-container" class="sidebar-l sidebar-o side-scroll sidebar-mini">
+	<!-- include : page-header -->
+	<!-- #include virtual="/assets/include/page-header.html" -->
+	<!-- //include : page-header -->
+
+	<!-- Main Container -->
+	<main id="main-container">
+		<!-- Page Header -->
+		<div class="content bg-gray-lighter">
+			<div class="row items-push">
+				<div class="col-sm-7">
+					<h1 class="page-heading">
+						전자결재 <small>기쁨의 느낌 당신은 당신의 멋진 새 프로젝트를 시작할 때!</small>
+					</h1>
+				</div>
+				<div class="col-sm-5 text-right hidden-xs">
+					<ol class="breadcrumb push-10-t">
+						<li>일반</li>
+						<li><a class="link-effect" href="">빈페이지</a></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<!-- END Page Header -->
+
+		<!-- Search Section -->
+		<div class="content">
+			<form action="base_pages_search.html" method="post">
+				<div class="input-group input-group-lg">
+					<input class="form-control" type="text" placeholder="Search application..">
+					<div class="input-group-btn">
+						<button class="btn btn-default"><i class="fa fa-search"></i></button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<!-- END Search Section -->
+
+		<!-- Page Content -->
+		<div class="content">
+			<div class="block">
+				<ul class="nav nav-tabs nav-justified" data-toggle="tabs">
+					<li>
+						<a href="#search-projects"><i class="fa fa-pencil"></i>진행 <span class="badge pull-right">3</span></a>
+					</li>
+					<li>
+						<a href="#search-users"><i class="fa fa-pencil"></i>승인 <span class="badge pull-right">3</span></a>
+					</li>
+					<li>
+						<a href="#search-classic"><i class="fa fa-ban"></i>반려 <span class="badge pull-right">3</span></a>
+					</li>
+					<li class="active">
+						<a href="#search-write"><i class="fa fa-pencil"></i>작성 <span class="badge badge-primary pull-right">3</span></a>
+					</li>
+				</ul>
+				<div class="block-content tab-content bg-white">
+					<!-- Projects -->
+					<div class="tab-pane fade fade-up" id="search-projects">
+						
+					</div>
+					<!-- END Projects -->
+
+					<!-- Users -->
+					<div class="tab-pane fade fade-up" id="search-users">
+						<div class="border-b push-30">
+							<h2 class="push-10">192 <span class="h5 font-w400 text-muted">Users Found</span></h2>
+						</div>
+						<table class="table table-striped table-vcenter js-dataTable-full">
+							<thead>
+								<tr>
+									<th class="text-center" style="width: 70px;"><i class="si si-user"></i></th>
+									<th style="width: 21%;">상태</th>
+									<th>Key</th>
+									<th class="hidden-xs" style="width: 40%;">등록일자</th>
+									<th class="text-center" style="width: 100px;">Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="text-center">
+										<img class="img-avatar img-avatar32" src="/assets/img/avatars/avatar16.jpg" alt="">
+									</td>
+									<td>
+										<span class="label label-success">진행</span>
+										<span class="label label-danger">반려</span>
+										<span class="label label-warning">완료</span>
+									</td>
+									<td class="font-w600"><a href="#">지출결의서</a></td>
+									<td>2015-11-11</td>
+									<td class="text-center">
+										<div class="btn-group" role="group">
+											<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+												<i class="glyphicon glyphicon-option-horizontal"></i>
+											</button>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li class="dropdown-header"><a href="#">상세보기</a></li>
+												<li>
+													<a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">3</span>News</a>
+												</li>
+												<li>
+													<a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">1</span>Messages</a>
+												</li>
+												<li class="divider"></li>
+												<li class="dropdown-header">More</li>
+												<li>
+													<a tabindex="-1" href="javascript:void(0)">Edit Profile..</a>
+												</li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="border-t">
+							<ul class="pagination">
+								<li class="disabled"><a href="javascript:void(0)">Prev</a></li>
+								<li class="active"><a href="javascript:void(0)">1</a></li>
+								<li><a href="javascript:void(0)">2</a></li>
+								<li><span>...</span></li>
+								<li><a href="javascript:void(0)">10</a></li>
+								<li><a href="javascript:void(0)">Next</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- END Users -->
+
+					<!-- Classic -->
+					<div class="tab-pane fade fade-up" id="search-classic">
+						
+					</div>
+					<!-- END Classic -->
+
+					<!-- Users -->
+					<div class="tab-pane fade fade-up in active" id="search-write">
+						<div class="block-content block-content-narrow">
+							<!-- jQuery Validation (.js-validation-bootstrap class is initialized in js/pages/base_forms_validation.js) -->
+							<!-- For more examples you can check out https://github.com/jzaefferer/jquery-validation -->
+							<form class="js-validation-bootstrap form-horizontal" action="base_forms_validation.html" method="post">
+								
+
+								<div class="form-group">
+									<label class="col-md-2 control-label" for="val-skill">결제</label>
+									<div class="col-md-7">
+										<input class="js-tags-input form-control" type="text" id="example-tags1" name="example-tags1" value="HTML,CSS,JavaScript" data-tagsinput-init="true" style="display: none;">
+										<div id="example-tags1_tagsinput" class="tagsinput" style="width: 100%; min-height: 36px; height: 36px;"><span class="tag"><span>대표&nbsp;&nbsp;</span><a href="#" title="Removing tag">x</a></span><span class="tag"><span>리더&nbsp;&nbsp;</span><a href="#" title="Removing tag">x</a></span><span class="tag"><span>JavaScript&nbsp;&nbsp;</span><a href="#" title="Removing tag">x</a></span><div id="example-tags1_addTag"><input id="example-tags1_tag" value="" data-default="Add tag" style="color: rgb(102, 102, 102); width: 68px;"></div><div class="tags_clear"></div></div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-2 control-label" for="val-skill">문서함 <span class="text-danger">*</span></label>
+									<div class="col-md-7">
+										<select class="form-control" id="val-skill" name="val-skill">
+											<option value="">문서를 선택하세요.</option>
+											<option value="">휴가신청</option>
+											<option value="">휴가신청</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-2 control-label" for="example-daterange1">휴가종류 <span class="text-danger">*</span></label>
+									<div class="col-md-10">
+										<label class="css-input css-radio css-radio-default push-10-r">
+											<input type="radio" name="radio-group1" checked=""><span></span> 연차
+										</label>
+										<label class="css-input css-radio css-radio-default push-10-r">
+											<input type="radio" name="radio-group1"><span></span> 반차
+										</label>
+										<label class="css-input css-radio css-radio-default">
+											<input type="radio" name="radio-group1"><span></span> 기타
+										</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-2 control-label" for="example-daterange1">휴가기간 <span class="text-danger">*</span></label>
+									<div class="col-md-10">
+										<div class="input-daterange input-group" data-date-format="mm/dd/yyyy">
+											<input class="form-control" type="text" id="example-daterange1" name="example-daterange1" placeholder="From">
+											<span class="input-group-addon"><i class="fa fa-chevron-right"></i></span>
+											<input class="form-control" type="text" id="example-daterange2" name="example-daterange2" placeholder="To">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-2 control-label" for="val-suggestions">사유 <span class="text-danger">*</span></label>
+									<div class="col-md-10">
+										<textarea class="form-control" id="val-suggestions" name="val-suggestions" rows="4" placeholder="Share your ideas with us.."></textarea>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-2 control-label"><a data-toggle="modal" data-target="#modal-terms" href="#">Terms</a> <span class="text-danger">*</span></label>
+									<div class="col-md-10">
+										<label class="css-input css-checkbox css-checkbox-primary" for="val-terms">
+											<input type="checkbox" id="val-terms" name="val-terms" value="1"><span></span> I agree to the terms
+										</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-10 col-md-offset-4">
+										<button class="btn btn-sm btn-primary" type="submit">Submit</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- END Users -->
+				</div>
+			</div>
+		</div>
+		<!-- END Page Content -->
+	</main>
+	<!-- END Main Container -->
+
+	<!-- include : page-footer -->
+	<!-- #include virtual="/assets/include/page-footer.html" -->
+	<!-- //include : page-footer -->
+</div>
+
+<!-- include : floor-js -->
+<!-- #include virtual="/assets/include/floor-js.html" -->
+<!-- //include : floor-js -->
+
+<!-- Page JS Plugins -->
+<script src="/assets/js/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<script src="/assets/js/plugins/bootstrap-datetimepicker/moment.min.js"></script>
+<script src="/assets/js/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="/assets/js/plugins/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
+<script src="/assets/js/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+<script src="/assets/js/plugins/select2/select2.full.min.js"></script>
+<script src="/assets/js/plugins/masked-inputs/jquery.maskedinput.min.js"></script>
+<script src="/assets/js/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+<script src="/assets/js/plugins/dropzonejs/dropzone.min.js"></script>
+<script src="/assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.js"></script>
+
+<!-- Page JS Code -->
+<script>
+	$(function () {
+		// Init page helpers (BS Datepicker + BS Datetimepicker + BS Colorpicker + BS Maxlength + Select2 + Masked Input + Range Sliders + Tags Inputs plugins)
+		App.initHelpers(['datepicker', 'datetimepicker', 'colorpicker', 'maxlength', 'select2', 'masked-inputs', 'rangeslider', 'tags-inputs']);
+	});
+</script>
+</body>
+</html>
