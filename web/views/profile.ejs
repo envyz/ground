@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<!--[if IE 9]> <html class="ie9 no-focus"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-focus"> <!--<![endif]-->
+<html>
 <head>
-<meta charset="utf-8">
-<title>Ground</title>
-<!-- #include virtual="/assets/include/head-meta.html" -->
-<!-- #include virtual="/assets/include/head-css.html" -->
+<title><%= title %></title>
+<% include include/head-meta.html %>
+<% include include/head-css.html %>
 </head>
-
 <body>
 <div id="page-container" class="sidebar-l sidebar-o side-scroll sidebar-mini">
-	<!-- include : page-header -->
-	<!-- #include virtual="/assets/include/page-header.html" -->
-	<!-- //include : page-header -->
+<!-- include : page-header -->
+<% include include/page-header.html %>
+<!-- //include : page-header -->
 
 	<!-- Main Container -->
 	<main id="main-container">
 		<!-- Page Header -->
-		<div class="content bg-image" style="background-image: url('/assets/img/photos/photo8@2x.jpg');">
+		<div class="content bg-image" style="background-image: url('/img/photos/photo8@2x.jpg');">
 			<div class="push-50-t push-15 clearfix">
 				<div class="push-15-r pull-left animated fadeIn">
-					<img class="img-avatar img-avatar-thumb" src="/assets/img/avatars/avatar13.jpg" alt="">
+					<img class="img-avatar img-avatar-thumb" src="/img/avatars/avatar13.jpg" alt="">
 				</div>
 				<h1 class="h2 text-white push-5-t animated zoomIn">홍길동</h1>
 				<h2 class="h5 text-white-op animated zoomIn">퍼블리싱</h2>
@@ -173,21 +170,21 @@
 							<ul class="nav-users push">
 								<li>
 									<a href="base_pages_profile.html">
-										<img class="img-avatar" src="/assets/img/avatars/avatar16.jpg" alt="">
+										<img class="img-avatar" src="/img/avatars/avatar16.jpg" alt="">
 										<i class="fa fa-circle text-success"></i> Donald Barnes
 										<div class="font-w400 text-muted"><small>Web Developer</small></div>
 									</a>
 								</li>
 								<li>
 									<a href="base_pages_profile.html">
-										<img class="img-avatar" src="/assets/img/avatars/avatar5.jpg" alt="">
+										<img class="img-avatar" src="/img/avatars/avatar5.jpg" alt="">
 										<i class="fa fa-circle text-success"></i> Rebecca Gray
 										<div class="font-w400 text-muted"><small>Web Designer</small></div>
 									</a>
 								</li>
 								<li>
 									<a href="base_pages_profile.html">
-										<img class="img-avatar" src="/assets/img/avatars/avatar4.jpg" alt="">
+										<img class="img-avatar" src="/img/avatars/avatar4.jpg" alt="">
 										<i class="fa fa-circle text-warning"></i> Megan Dean
 										<div class="font-w400 text-muted"><small>Photographer</small></div>
 									</a>
@@ -207,27 +204,18 @@
 	<!-- END Main Container -->
 
 	<!-- include : page-footer -->
-	<!-- #include virtual="/assets/include/page-footer.html" -->
+	<% include include/page-footer.html %>
 	<!-- //include : page-footer -->
 </div>
 
 <!-- include : floor-js -->
-<!-- #include virtual="/assets/include/floor-js.html" -->
+<% include include/floor-js.html %>
 <!-- //include : floor-js -->
 
-<!-- Page Plugins -->
-<script src="/assets/js/plugins/slick/slick.min.js"></script>
-<script src="/assets/js/plugins/chartjs/Chart.min.js"></script>
-
-<!-- Page JS Code -->
-<script src="/assets/js/pages/base_pages_dashboard.js"></script>
-
-<script>
+<script type="text/javascript">
 	$(function () {
-		// Init page helpers (Slick Slider plugin)
-		App.initHelpers('slick');
+		 
 
-		
 	});
 </script>
 </body>

@@ -1,3 +1,57 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!DOCTYPE html>
+<html>
+<head>
+<title>페이지를 찾을 수 없습니다.</title>
+<% include include/head-meta.html %>
+<% include include/head-css.html %>
+</head>
+
+<body>
+<!-- Error Content -->
+<div class="content bg-white text-center pulldown overflow-hidden">
+	<div class="row">
+			<div class="col-sm-6 col-sm-offset-3">
+					<!-- Error Titles -->
+					<h1 class="font-s128 font-w300 text-city animated flipInX">404</h1>
+					<h2 class="h3 font-w300 push-50 animated fadeInUp">We are sorry but the page you are looking for was not found..</h2>
+					<!-- END Error Titles -->
+
+					<!-- Search Form -->
+					<form class="form-horizontal push-50" action="base_pages_search.html" method="post">
+							<div class="form-group">
+									<div class="col-sm-6 col-sm-offset-3">
+											<div class="input-group input-group-lg">
+													<input class="form-control" type="text" placeholder="Search application..">
+													<div class="input-group-btn">
+															<button class="btn btn-default"><i class="fa fa-search"></i></button>
+													</div>
+											</div>
+									</div>
+							</div>
+					</form>
+					<!-- END Search Form -->
+			</div>
+	</div>
+</div>
+<!-- END Error Content -->
+
+
+
+<!-- Full Footer -->
+<div class="pulldown push-30-t text-center animated fadeInUp">
+	<small class="text-muted"><span class="js-year-copy"></span> &copy; OneUI 1.2</small>
+</div>
+<!-- //Full Footer -->
+
+<!-- include : floor-js -->
+<% include include/floor-js.html %>
+<!-- //include : floor-js -->
+
+<script type="text/javascript">
+	$(function () {
+		 
+
+	});
+</script>
+</body>
+</html>
