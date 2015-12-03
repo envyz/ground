@@ -5,6 +5,28 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var mysql = require('mysql');
+
+var dbConnection = mysql.createConnection({
+  host : 'localhost',
+  port : 3306,
+  user : 'root',
+  password : 'dpsqlwm!254',
+  database : 'data'
+});
+dbConnection.connect();
+
+dbConnection.query('select * from test', function (err, rows, fields) {
+    console.log(rows);
+});
+
+// 만약, 조건값이 있다면?
+// dbConnection.query('select * from test where id=?', [id] , function (err, rows, fields) {
+//     console.log(rows);
+// });
+
+//dbConnection.end();
+
 var routes = require('./routes/index');
 var users = require('./routes/_blank');
 var login = require('./routes/login');
