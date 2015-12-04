@@ -35,6 +35,7 @@
 
 		<!-- Page Content -->
 		<div class="content">
+			<ul class="news"></ul>
 			<h2 class="content-heading">콘텐츠</h2>
 			<div class="row">
 				<div class="col-lg-3">
@@ -151,6 +152,24 @@
 		 
 
 	});
+</script>
+
+<script type="text/javascript">
+// $.ajax({
+//    url: './feedlist.json',
+//    async: false,
+//    dataType: 'json',
+//    success: function (response) {
+//        var items = [];
+//        console.log(items.length);
+//        $.each(response.news,function(i,item){
+//            items.push('<li><ul><li class="title">'+ item.title +'</li><li>' + dateFormat(item.created_at,"fullDate") + '</li><li><p>'+ item.content +'</p></li></ul></li>');
+//        });
+//        $('.news').append(items.join(''));
+//    }
+// });
+
+
 </script>
 </body>
 </html>
