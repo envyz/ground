@@ -45,7 +45,7 @@ var BaseTableDatatables = function() {
             renderer: 'bootstrap',
             oLanguage: {
                 sLengthMenu: "_MENU_",
-                sInfo: "Showing <strong>_START_</strong>-<strong>_END_</strong> of <strong>_TOTAL_</strong>",
+                sInfo: "<strong>_START_</strong>/<strong>_END_</strong> Total <strong>_TOTAL_</strong>",
                 oPaginate: {
                     sPrevious: '<i class="fa fa-angle-left"></i>',
                     sNext: '<i class="fa fa-angle-right"></i>'

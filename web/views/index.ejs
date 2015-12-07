@@ -5,8 +5,9 @@
 <% include include/head-meta.html %>
 <% include include/head-css.html %>
 </head>
+
 <body>
-<div id="page-container" class="sidebar-l sidebar-o side-scroll sidebar-mini">
+<div id="page-container" class="sidebar-l sidebar-o side-scroll">
 <!-- include : page-header -->
 <% include include/page-header.html %>
 <!-- //include : page-header -->
@@ -14,24 +15,21 @@
 	<!-- main-container -->
 	<main id="main-container">
 		<!-- Page Header -->
-		<div class="content bg-gray-lighter">
-			<div class="row items-push">
-				<div class="col-sm-7">
-					<h1 class="page-heading">
-						RSS테스트 <small>기쁨의 느낌 당신은 당신의 멋진 새 프로젝트를 시작할 때!</small>
-					</h1>
-					<h1><%= title %></h1>
-					<p>Welcome to <%= title %></p>
+		<div class="content bg-image" style="background-image: url('/img/photos/photo8@2x.jpg');">
+			<div class="push-50-t push-15 clearfix">
+				<div class="push-15-r pull-left animated fadeIn">
+					<img class="img-avatar img-avatar-thumb" src="/img/avatars/avatar13.jpg" alt="">
 				</div>
-				<div class="col-sm-5 text-right hidden-xs">
-					<ol class="breadcrumb push-10-t">
-						<li>일반</li>
-						<li><a class="link-effect" href="">빈페이지</a></li>
-					</ol>
-				</div>
+				<h1 class="h2 text-white push-5-t animated zoomIn">홍길동</h1>
+				<h2 class="h5 text-white-op animated zoomIn">퍼블리싱</h2>
 			</div>
 		</div>
 		<!-- END Page Header -->
+
+		<!-- Stats -->
+		<div class="content bg-white border-b">
+		</div>
+		<!-- END Stats -->
 
 		<!-- Page Content -->
 		<div class="content">

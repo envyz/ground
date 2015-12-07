@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<!--[if IE 9]> <html class="ie9 no-focus"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-focus"> <!--<![endif]-->
+<html>
 <head>
-<meta charset="utf-8">
-<title>Ground</title>
-<!-- #include virtual="/assets/include/head-meta.html" -->
-<!-- #include virtual="/assets/include/head-css.html" -->
+<title><%= title %></title>
+<% include include/head-meta.html %>
+<% include include/head-css.html %>
 </head>
-
 <body>
-<div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
-    <!-- include : page-header -->
-    <!-- #include virtual="/assets/include/page-header.html" -->
-    <!-- //include : page-header -->
+<div id="page-container" class="sidebar-l sidebar-o side-scroll">
+<!-- include : page-header -->
+<% include include/page-header.html %>
+<!-- //include : page-header -->
 
-    <!-- Main Container -->
+    <!-- main-container -->
     <main id="main-container">
         <!-- Page Header -->
         <div class="content bg-gray-lighter">
@@ -170,16 +167,15 @@
         </div>
         <!-- END Page Content -->
     </main>
-    <!-- END Main Container -->
+    <!-- //main-container -->
 
     <!-- include : page-footer -->
-    <!-- #include virtual="/assets/include/page-footer.html" -->
+    <% include include/page-footer.html %>
     <!-- //include : page-footer -->
 </div>
-<!-- END Page Container -->
 
 <!-- include : floor-js -->
-<!-- #include virtual="/assets/include/floor-js.html" -->
+<% include include/floor-js.html %>
 <!-- //include : floor-js -->
 
 <!-- Page JS Code -->

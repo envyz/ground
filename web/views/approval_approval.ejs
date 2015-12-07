@@ -1,30 +1,18 @@
 <!DOCTYPE html>
-<!--[if IE 9]> <html class="ie9 no-focus"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-focus"> <!--<![endif]-->
+<html>
 <head>
-<meta charset="utf-8">
-<title>Ground</title>
-<!-- #include virtual="/assets/include/head-meta.html" -->
-<!-- Page JS Plugins CSS -->
-<link rel="stylesheet" href="/assets/js/plugins/bootstrap-datepicker/bootstrap-datepicker3.min.css">
-<link rel="stylesheet" href="/assets/js/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
-<link rel="stylesheet" href="/assets/js/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
-<link rel="stylesheet" href="/assets/js/plugins/select2/select2.min.css">
-<link rel="stylesheet" href="/assets/js/plugins/select2/select2-bootstrap.min.css">
-<link rel="stylesheet" href="/assets/js/plugins/ion-rangeslider/css/ion.rangeSlider.min.css">
-<link rel="stylesheet" href="/assets/js/plugins/ion-rangeslider/css/ion.rangeSlider.skinHTML5.min.css">
-<link rel="stylesheet" href="/assets/js/plugins/dropzonejs/dropzone.min.css">
-<link rel="stylesheet" href="/assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.css">
-<!-- #include virtual="/assets/include/head-css.html" -->
+<title><%= title %></title>
+<% include include/head-meta.html %>
+<% include include/head-css.html %>
 </head>
 
 <body>
-<div id="page-container" class="sidebar-l sidebar-o side-scroll sidebar-mini">
-	<!-- include : page-header -->
-	<!-- #include virtual="/assets/include/page-header.html" -->
-	<!-- //include : page-header -->
+<div id="page-container" class="sidebar-l sidebar-o side-scroll">
+<!-- include : page-header -->
+<% include include/page-header.html %>
+<!-- //include : page-header -->
 
-	<!-- Main Container -->
+	<!-- main-container -->
 	<main id="main-container">
 		<!-- Page Header -->
 		<div class="content bg-gray-lighter">
@@ -99,7 +87,7 @@
 							<tbody>
 								<tr>
 									<td class="text-center">
-										<img class="img-avatar img-avatar32" src="/assets/img/avatars/avatar16.jpg" alt="">
+										<img class="img-avatar img-avatar32" src="/img/avatars/avatar16.jpg" alt="">
 									</td>
 									<td>
 										<span class="label label-success">진행</span>
@@ -229,28 +217,28 @@
 		</div>
 		<!-- END Page Content -->
 	</main>
-	<!-- END Main Container -->
+	<!-- //main-container -->
 
-	<!-- include : page-footer -->
-	<!-- #include virtual="/assets/include/page-footer.html" -->
-	<!-- //include : page-footer -->
+    <!-- include : page-footer -->
+    <% include include/page-footer.html %>
+    <!-- //include : page-footer -->
 </div>
 
 <!-- include : floor-js -->
-<!-- #include virtual="/assets/include/floor-js.html" -->
+<% include include/floor-js.html %>
 <!-- //include : floor-js -->
 
 <!-- Page JS Plugins -->
-<script src="/assets/js/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-<script src="/assets/js/plugins/bootstrap-datetimepicker/moment.min.js"></script>
-<script src="/assets/js/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
-<script src="/assets/js/plugins/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
-<script src="/assets/js/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
-<script src="/assets/js/plugins/select2/select2.full.min.js"></script>
-<script src="/assets/js/plugins/masked-inputs/jquery.maskedinput.min.js"></script>
-<script src="/assets/js/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
-<script src="/assets/js/plugins/dropzonejs/dropzone.min.js"></script>
-<script src="/assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.js"></script>
+<script src="/js/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<script src="/js/plugins/bootstrap-datetimepicker/moment.min.js"></script>
+<script src="/js/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="/js/plugins/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
+<script src="/js/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+<script src="/js/plugins/select2/select2.full.min.js"></script>
+<script src="/js/plugins/masked-inputs/jquery.maskedinput.min.js"></script>
+<script src="/js/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+<script src="/js/plugins/dropzonejs/dropzone.min.js"></script>
+<script src="/js/plugins/jquery-tags-input/jquery.tagsinput.min.js"></script>
 
 <!-- Page JS Code -->
 <script>
