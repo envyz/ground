@@ -1,10 +1,12 @@
 var express = require('express');
+var session = require('express-session');
 var router = express.Router();
 
+//app.use(session({secret: 'ssshhhhh'}));
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	res.render('index', { title: 'Ground' });
+	res.render('index', { title: 'Ground', user : req.user });
 }).post('/', function(req, res, next) {
 	res.render('index', { title: 'Ground' });
 });
@@ -17,9 +19,26 @@ router.get('/profile', function(req, res, next) {
 });
 
 router.get('/login', function(req, res, next) {
-	res.render('account_login', { title: 'Ground' });
+	res.render('account_login', { title: 'Ground', user : req.user });
 }).post('/login', function(req, res, next) {
-	res.render('account_login_result', { title: 'Ground', username: req.body.login-username, password: req.body.login-password });
+	var post = req.body;
+	if (post.user === 'izmare' && post.password === 'absolute') {
+		req.session.user_id = sundars_user_id_here;
+		//res.redirect('/my_secret_page');
+		res.send('POST request to homepage');
+	} else {
+		res.send('Bad user/pass');
+	}
+
+	//res.render('account_login_result', { title: 'Ground', username: req.body.login-username, password: req.body.login-password });
+
+	// if (req.body.username && req.body.username === 'user' && req.body.password && req.body.password === 'pass') {
+	// 	req.session.authenticated = true;
+	// 	res.redirect('/index');
+	// } else {
+	// 	req.flash('error', 'Username and password are incorrect');
+	// 	res.redirect('/login');
+	// }
 });
 
 router.get('/lock', function(req, res, next) {

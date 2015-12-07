@@ -15,13 +15,13 @@
 	<!-- Main Container -->
 	<main id="main-container">
 		<!-- Page Header -->
-		<div class="content bg-image" style="background-image: url('/img/photos/photo8@2x.jpg');">
+		<div class="content bg-image" style="background-image: url('/img/photos/photo12@2x.jpg');">
 			<div class="push-50-t push-15 clearfix">
 				<div class="push-15-r pull-left animated fadeIn">
 					<img class="img-avatar img-avatar-thumb" src="/img/avatars/avatar13.jpg" alt="">
 				</div>
-				<h1 class="h2 text-white push-5-t animated zoomIn">홍길동</h1>
-				<h2 class="h5 text-white-op animated zoomIn">퍼블리싱</h2>
+				<h1 class="h2 text-white animated zoomIn">홍길동</h1>
+				<h2 class="h5 text-white-op push-5-t animated zoomIn">퍼블리싱</h2>
 			</div>
 		</div>
 		<!-- END Page Header -->
@@ -46,9 +46,85 @@
 									<button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
 								</li>
 							</ul>
-							<h3 class="block-title"><i class="fa fa-newspaper-o"></i> Updates</h3>
+							<h3 class="block-title"><i class="fa fa-newspaper-o"></i> Public profile</h3>
 						</div>
 						<div class="block-content">
+							<form class="form-horizontal push-10-t push-10" action="base_forms_premade.html" method="post" onsubmit="return false;">
+
+								<div class="form-group">
+									<div class="col-xs-12">
+									    <div class="form-material">
+									        <img class="img-avatar img-avatar-thumb" src="/img/avatars/avatar13.jpg" alt="">
+									        <input class="form-control" type="file" id="example-file-input" name="example-file-input">
+									        <label for="example-file-input">사진 업로드</label>
+									    </div>
+									</div>
+								</div>
+							    <div class="form-group">
+							        <div class="col-xs-12">
+							            <div class="form-material">
+							                <input class="form-control" type="text" id="register2-username" name="register2-username" placeholder="Enter your username..">
+							                <label for="register2-username">Username</label>
+							            </div>
+							        </div>
+							    </div>
+							    <div class="form-group">
+							        <div class="col-xs-6">
+							            <div class="form-material">
+							                <input class="form-control" type="text" id="contact2-firstname" name="contact2-Password" placeholder="Enter your Password..">
+							                <label for="contact2-Password">Password</label>
+							            </div>
+							        </div>
+							        <div class="col-xs-6">
+							            <div class="form-material">
+							                <input class="form-control" type="text" id="contact2-lastname" name="contact2-password2" placeholder="Enter your password2..">
+							                <label for="contact2-password2">Confirm Password</label>
+							            </div>
+							        </div>
+							    </div>
+							    <div class="form-group">
+							        <div class="col-xs-12">
+							            <div class="form-material">
+							                <input class="form-control" type="email" id="register2-email" name="register2-email" placeholder="Enter your email..">
+							                <label for="register2-email">Email</label>
+							            </div>
+							        </div>
+							    </div>
+							    <div class="form-group">
+							        <div class="col-xs-12">
+							            <div class="form-material">
+							                <select class="form-control" id="contact2-subject" name="contact2-subject" size="1">
+							                    <option value="1">Support</option>
+							                    <option value="2">Billing</option>
+							                    <option value="3">Management</option>
+							                    <option value="4">Feature Request</option>
+							                </select>
+							                <label for="contact2-subject">Where?</label>
+							            </div>
+							        </div>
+							    </div>
+							    <div class="form-group">
+							        <div class="col-xs-12">
+							            <div class="form-material">
+							                <textarea class="form-control" id="contact2-msg" name="contact2-msg" rows="7" placeholder="Enter your message.."></textarea>
+							                <label for="contact2-msg">Message</label>
+							            </div>
+							            <div class="help-block text-right">Feel free to use common tags: &lt;blockquote&gt;, &lt;strong&gt;, &lt;em&gt;</div>
+							        </div>
+							    </div>
+							    <div class="form-group">
+							        <div class="col-xs-12">
+							            <label class="css-input switch switch-sm switch-success">
+							                <input type="checkbox" id="register2-terms" name="register2-terms"><span></span> Agree to terms?
+							            </label>
+							        </div>
+							    </div>
+							    <div class="form-group">
+							        <div class="col-xs-12">
+							            <button class="btn btn-sm btn-success" type="submit"><i class="fa fa-plus push-5-r"></i> Register</button>
+							        </div>
+							    </div>
+							</form>
 						</div>
 					</div>
 					<!-- END Timeline -->
