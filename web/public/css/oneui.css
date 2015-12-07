@@ -6441,7 +6441,7 @@ a.block.block-link-hover3:active {
   min-height: 40px;
   text-align: right;
   color: #999;
-  font-size: 13px;
+  font-size: 11px;
   font-style: italic;
   background-color: #f9f9f9;
   border-radius: 2px;
@@ -6458,7 +6458,7 @@ a.block.block-link-hover3:active {
   border-radius: 50%;
 }
 .list-timeline .list-timeline-content {
-  padding: 10px 10px 1px;
+  padding: 8px 0 1px;
 }
 .list-timeline .list-timeline-content > p:first-child {
   margin-bottom: 0;
@@ -6470,7 +6470,7 @@ a.block.block-link-hover3:active {
   .list-timeline:before {
     position: absolute;
     top: 0;
-    left: 120px;
+    left: 100px;
     bottom: 0;
     display: block;
     width: 4px;
@@ -6492,19 +6492,19 @@ a.block.block-link-hover3:active {
     margin: 0;
     padding-right: 0;
     padding-left: 0;
-    width: 90px;
+    width: 70px;
     background-color: transparent;
   }
   .list-timeline .list-timeline-icon {
     top: 3px;
-    left: 105px;
+    left: 85px;
     width: 34px;
     height: 34px;
     line-height: 34px;
     z-index: 2 !important;
   }
   .list-timeline .list-timeline-content {
-    padding-left: 160px;
+    padding-left: 135px;
   }
 }
 .list-activity > li {

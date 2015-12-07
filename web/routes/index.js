@@ -18,6 +18,8 @@ router.get('/profile', function(req, res, next) {
 
 router.get('/login', function(req, res, next) {
 	res.render('account_login', { title: 'Ground' });
+}).post('/login', function(req, res, next) {
+	res.render('account_login_result', { title: 'Ground', username: req.body.login-username, password: req.body.login-password });
 });
 
 router.get('/lock', function(req, res, next) {
