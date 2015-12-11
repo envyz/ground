@@ -1,0 +1,13 @@
+
+[
+    {
+        "id": 2,
+        "name": "An ice sculpture",
+        "password": "123"
+    },
+    {
+        "id": 3,
+        "name": "A blue mouse",
+        "password": "3333"
+    }
+]

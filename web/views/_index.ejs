@@ -33,7 +33,6 @@
 
 		<!-- Page Content -->
 		<div class="content">
-
 			<ul class="news_data"></ul>
 			<div class="form-group">
 				<div class="col-xs-12">
@@ -172,20 +171,20 @@ $(function () {
 	var $target = $('.news_data');
 	var $send = $('.btn.btn-sm.btn-block.btn-primary');
 	
-	// $.ajax({
-	// 	type:'GET',
-	// 	url: './data/data.json',
-	// 	async: false,
-	// 	dataType: 'json',
-	// 	success: function(data){
-	// 		$.each(data, function(i, detail){
-	// 			$target.append('<li class="title">'+ detail.name +' : '+ detail.password +'</li>');
-	// 		});
-	// 	},
-	// 	error: function(){
-	// 		console.log("ahh!!");
-	// 	}
-	// });
+	$.ajax({
+		type:'GET',
+		url: './data/data.json',
+		async: false,
+		dataType: 'json',
+		success: function(data){
+			$.each(data, function(i, detail){
+				$target.append('<li class="title">'+ detail.name +' : '+ detail.password +'</li>');
+			});
+		},
+		error: function(){
+			console.log("ahh!!");
+		}
+	});
 
 // var datatarget = {
 // 	name : $("#login-username").val(),
@@ -193,12 +192,8 @@ $(function () {
 // }
 
 	$send.on("click", function(){
-		$.ajaxSetup({
-		    contentType: "application/json;charset=UTF-8"
-		});
 		$.ajax({
 			type:'POST',
-    crossDomain: true,
 			url: './data/data2.json',
 			dataType: "json",
 			contentType: "application/json",
