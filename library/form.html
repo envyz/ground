@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+<link href="tomorrow.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+</style>
+</head>
+
+<body>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="emmet.js"></script>
+<script type="text/javascript" src="highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+$(function(){
+
+	var code = [
+		$.e("div#name>ul>li{Hello}"), 
+		$.e("input[type='text'][id='aa'][name='']+label[for='']{이름}"), 
+		$.e("input[type='checkbox'][id=''][name='']"), 
+		$.e("input[type='radio'][id=''][name='']")
+	];
+	function replaceCode(){
+		//console.log(code);
+		var reCode = [];
+		var lt = reCode.indexOf('<');
+		var gt = reCode.indexOf('>');
+
+
+		console.log(reCode, lt, gt);
+		$.each(code, function(i, snip){
+
+			reCode[i] = snip[0].outerHTML;
+
+			for(j=0; j<reCode[i].length; j++){
+				reCode[i] = reCode[i].replace('<','&lt;').replace('>', '&gt;');
+			}
+			//reCode[i] = (snip[0].outerHTML);
+
+
+
+			//$(".codeIt").text($(".codeIt").html());
+			//console.log(i, reCode);
+			//return reCode;
+
+			//console.log("each in", reCode);
+			//$("body").append.html(reCode);
+			console.log(i, reCode[i], lt[i], gt[i]);
+			$("body").append("<pre><code class='html'>" + reCode[i] +"</code></pre>");
+		});
+
+	}
+	replaceCode();
+
+	//$("code").text($("code").html(code));
+
+	
+
+});
+</script>
+</body>
+</html>
