@@ -1,0 +1,337 @@
+		<!-- //contents --> 
+	</div>
+</div>
+
+<div id="_footer">
+	<p class="_copy">Copyright ⓒ <strong>www.gmarket.co.kr</strong> All rights reserved.</p>
+</div>
+<div id="_top"><a href="#"><img src="/_index/common/top.gif" alt="TOP"></a></div>
+<script type="text/javascript" src="/_index/common/shCore.js"></script>
+<script type="text/javascript" src="/_index/pagelist/tree.jquery.js"></script>
+<!-- <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushCss.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js" type="text/javascript"></script> -->
+<script type="text/javascript">
+$(function(){
+	console.log( "ready!" );
+
+	var currentURL =  document.location.pathname;	
+
+	if( _folderName(currentURL)  === "pagelist"){
+		$("title, #_header h1").html("["+ _htmlInsert( _pageName(currentURL) ) +"] 퍼블리싱 페이지리스트");
+	}else if( _folderName(currentURL)  === "convention"){
+		$("title, #_header h1").html("["+ _htmlInsert( _pageName(currentURL) ) +"] 코드 컨벤션");
+	}else if( _folderName(currentURL)  === "snippet"){
+		$("title, #_header h1").html("["+ _htmlInsert( _pageName(currentURL) ) +"] 코드 라이브러리");
+	}
+
+	$("#_container h2").html( _htmlInsert( _folderName(currentURL) ) );
+	
+	$("#_gnb li").each(function() {
+		var target = _folderName( $(this).find("a").attr("href") );	
+		if(_folderName(currentURL) === target){
+			$(this).addClass("active");
+			$("body").addClass( _pageName(currentURL) );
+		}	
+	});	
+	$("#_lnb ul").css("display","none").hide();
+	$("#_lnb ul."+ _folderName(currentURL)).show();	
+	$("#_lnb li").each(function() {
+		var target = $(this).find("a").attr("href");	
+		if(currentURL === target){
+			$(this).addClass("active");
+			$("body").addClass( _pageName(currentURL) );
+		}	
+	});	
+
+	function _htmlInsert(text){
+		return text.charAt(0).toUpperCase() + text.substring(1, text.length).toLowerCase();
+	}	
+	function _folderName(path){
+		return path.split("/",3).pop();
+	}
+	function _pageName(path){
+		return path.split("/").pop().split(".html").shift();
+	}
+
+	var pagelistLnb = [];
+	var items = [];
+	$.ajax({
+		type:"GET",
+		url:"../urls.json",
+		dataType:"json",
+		success: function(urls){
+			var object = _pageName(currentURL);
+			//console.log(object)
+			var countDownFrom = function countDownFrom(depth, object, key, value) {
+				//console.log(depth);
+				depth++; 
+				key++; 
+				value++; 
+				if (depth > 6){return false;} // depth < 0이면 재귀 호출을 하지 않는다.
+				$.each(object, function(key, value) {				
+
+					//if(!key.match('include')){
+						if(typeof value === "object"){
+							if(key.indexOf("legacy_") != -1){
+								items.push( "<li class='depth del'><h"+ depth +">"+ key +"</h"+ depth +"><ul>" );
+							}else{
+								items.push( "<li class='depth'><h"+ depth +">"+ key +"</h"+ depth +"><ul>" );	
+							};
+							
+							countDownFrom(depth, value, key, value);
+							items.push( "</ul>" );
+						}else{					
+							items.push( "<li><a href='/"+ value +"'>"+ key +"<strong class='filename'></strong></a></li>" );
+						}
+					//}
+				});
+
+			};
+
+			$.each(urls, function(index, value) {
+				console.log(urls,index, value);
+				pagelistLnb.push( "<li><a href='/_index/pagelist/"+ index +".html'>"+ index +"</a></li>" );
+				if(index === object){
+					items.push( "<ul>" );
+					var i, v;
+					countDownFrom(2, urls[object], i, v);
+					items.push( "</ul>" );
+				}
+			});
+			$( "<ul/>", { "class": "pagelist",html: pagelistLnb.join( "" )	}).appendTo( "#_lnb" );
+
+			
+				
+			 
+
+			// $.each(urls, function(index1, value1) {
+			// 	$.each(value1, function(index2, value2) {
+			// 		if( typeof value2 === "object"){
+			// 			items.push( "<h3>"+ index2 +"</h3>" );
+			// 			items.push( "<ul>" );
+			// 			$.each(value2, function(index3, value3) {
+			// 				if( typeof value3 === "object"){
+			// 					items.push( "<li class='depth'><h4>"+ index3 +"</h4>" );
+			// 					items.push( "<ul>" );
+
+			// 					$.each(value3, function(a, b){
+			// 						eachFunction(a, b);
+			// 					}); 
+			// 					// $.each(value3, function(index4, value4) {
+			// 					// 	if(!(index4.match('include'))){
+			// 					// 		if( typeof value4 === "object" ){
+			// 					// 			items.push( "<li class='depth'><h5>"+ index4 +"</h5>" );
+			// 					// 			items.push( "<ul>" );
+			// 					// 			$.each(value4, function(index5, value5) {
+			// 					// 				if(!(index5.match('include'))){
+			// 					// 					if( typeof value5 === "object"){
+			// 					// 						items.push( "<li class='depth'><h6>"+ index5 +"</h6>" );
+			// 					// 						items.push( "<ul>" );
+			// 					// 						$.each(value5, function(index6, value6) {
+			// 					// 							items.push( "<li><a href='/"+ value6 +"'><strong class='filename'>"+ index6 +"</strong></a></li>" );
+			// 					// 						});
+			// 					// 						items.push( "</ul>" );
+			// 					// 					}else{					
+			// 					// 						items.push( "<li><a href='/"+ value5 +"'><strong class='filename'>"+ index5 +"</strong></a></li>" );
+			// 					// 					}
+			// 					// 				}
+			// 					// 			});
+			// 					// 			items.push( "</ul>" );
+			// 					// 		}else{					
+			// 					// 			items.push( "<li><a href='/"+ value4 +"'><strong class='filename'>"+ index4 +"</strong></a></li>" );
+			// 					// 		}
+			// 					// 	}
+			// 					// });
+			// 					items.push( "</ul>" );
+			// 				}else{					
+			// 					items.push( "<li><a href='/"+ value3 +"'><strong class='filename'>"+ index3 +"</strong></a></li>" );
+			// 				}
+			// 			});
+			// 			items.push( "</ul>" );
+			// 		}else{					
+			// 			items.push( "<li><a href='/"+ value2 +"'><strong class='filename'>"+ index2 +"</strong></a></li>" );
+			// 		}
+			// 		items.push( "</ul>" );
+			// 	});
+			// });
+			$( "<div/>", {
+				"class": "_list",
+				html: items.join( "" )
+			}).appendTo( "#_contents" );
+
+			//$("._list li").has("h4, ul").addClass("depth");
+			$("._list li.del.depth").has("ul").children("ul").hide();
+
+			var title = $("div._list h3, div._list h4, div._list h5, div._list h6"),
+				contents = $(".depth>ul");
+			
+			title.each(function() {
+				// var linkLength = $(this).next("ul").find("li").not(".depth").length;
+				// $(this).append(" <em class='link_length'>"+ linkLength +"</em>");
+
+				//if(!(linkLength === 0)){
+					$(this).on("mouseover",function(){				
+						$(this).addClass("hover");
+					}).on("mouseout",function(){
+						var linkLength = $(this).next("ul").find("li").not(".depth").length;
+						if(!(linkLength === 0)){
+							$(this).removeClass("hover");
+						}
+					}).on("click", function(event) {
+						$(this).next("ul").stop(true,true).slideToggle();
+					});
+				//}
+			});	
+
+			$("#pagelist ._list li a").each(function() {
+				contents.css("display","none").hide();	
+				// var fileName = $(this).attr("href").substring($(this).attr("href").lastIndexOf ("/") + 1);
+				// $(this).prepend("<strong class='filename'>"+ fileName +"</strong>");
+				if(!($(this).attr("href") == "#")) {
+					$(this).attr({target: "_blank", title: "새창"});
+				}
+				$(this).on("click", function() {
+					if($(this).attr("href").match("#")) {
+						return false;
+					}
+				});	
+			});
+		}
+	});
+	// $.ajax({
+	// 	type:"GET",
+	// 	url:"index.json",
+	// 	dataType:"json",
+	// 	success: function(urls){
+
+	// 		var values = [];
+	// 		$.each(urls, function(index, value) {
+	// 			values[index] = value;
+	// 			if(!(value.match('include'))){	
+	// 				var depth1 = value.split("\\",1).pop();
+	// 				var depth2 = value.split("\\",2).pop();
+	// 				var depth3 = value.split("\\",3).pop();
+	// 				var depth4 = value.split("\\",4).pop();
+	// 				var cutCode = value.lastIndexOf("\\");
+	// 				var fileName = value.substring(cutCode+1);
+	// 				console.log(depth1,value.match(depth2),value.match(depth3),value.match(depth4));
+
+	// 				if(typeof index === "object") items.push( "<h3>"+ index +"</h3>" );
+	// 				else items.push( "<li class="+ depth2 +"><a href='/"+ value +"'>"+ value +"</a></li>" );
+	// 			}
+	// 			return;
+	// 		});
+
+	// 		//$(depth2).wrapAll( "<ul>");
+
+	// 		//values.sort();
+
+	// 		// $.each(values, function(index, value){				
+	// 		// });
+	// 		$( "<div/>", {
+	// 			"class": "_list",
+	// 			html: items.join( "" )
+	// 		}).appendTo( "#_contents" );
+	// 	}
+	// });
+
+	//page contents
+	$("div._button a").on("click", function() {
+		var thisURL = $(this).attr("href");
+		if(thisURL == "#AllOpen") {
+			contents.not($("._list li.del.depth").has("ul").children("ul")).slideDown();
+		}else if(thisURL == "#AllClose") {
+			contents.slideUp();	
+		}else{
+
+		}
+	});	
+
+	$('._button span._lang a').on('click', function () {
+		$('._button span._lang a').removeClass('on');
+		$(this).addClass('on');	
+	});
+	$('._list li a').on({
+		click : function (e) {
+		  var $target = $(this),
+				pageChk = document.location.pathname.split('/_index/pagelist/').pop();
+			//$target.addClass('on');
+			if( pageChk == 'pay.html' ){var hitLang =  $(this).attr('href').split('/html_pay/').pop().split('/').shift();}
+			else if( pageChk == 'global.html' ){var hitLang = $(this).attr('href').split('/html/').pop().split('/').shift();}
+			var viewLang = document.location.hash.split('#').pop();
+			if ( viewLang != '' &&  viewLang != 'AllOpen' &&  viewLang != 'AllClose'){
+				var newHref = $(this).attr('href').replace(hitLang, viewLang);
+				$target.attr('href',newHref).submit();
+			}
+		}
+	});	
+
+	$("._list li").has("h4, ul").addClass("depth");
+	$("._list li.del.depth").has("ul").children("ul").hide();
+
+	var title = $("div._list h3, div._list h4, div._list h5"),
+		contents = $("div._list ul"),
+		total = $(contents).find("li").length - $(contents).find("li").has("h4, ul").length - $(contents).find("li.del, li.del li").length,
+		ing = $(contents).find("li.ing").length + $(contents).find("li.check").length + $(contents).find("li.update").length,
+		finish = $(contents).find("li.update, li.finish").length,
+		progress = Math.floor((ing + finish) / total * 100);
+	
+	title.each(function() {
+		var linkLength = $(this).next("ul").find("li").not(".depth").length;
+		$(this).append(" <em class='link_length'>"+ linkLength +"</em>");
+
+		if(!(linkLength === 0)){
+			$(this).on("mouseover",function(){				
+				$(this).addClass("hover");
+			}).on("mouseout",function(){
+				var linkLength = $(this).next("ul").find("li").not(".depth").length;
+				if(!(linkLength === 0)){
+					$(this).removeClass("hover");
+				}
+			}).on("click", function(event) {
+				$(this).next("ul").stop(true,true).slideToggle();
+			});
+		}
+	});	
+
+	$("#pagelist ._list li a").each(function() {
+		contents.css("display","none").hide();	
+		var fileName = $(this).attr("href").substring($(this).attr("href").lastIndexOf ("/") + 1);
+		$(this).prepend("<strong class='filename'>"+ fileName +"</strong>");
+		if(!($(this).attr("href") == "#")) {
+			$(this).attr({target: "_blank", title: "새창"});
+		}
+		$(this).on("click", function() {
+			if($(this).attr("href").match("#")) {
+				return false;
+			}
+		});	
+	});
+	
+	_clone_source();
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+
+	$("#snippet ._list li a").on("click", function(e){
+		e.preventDefault();
+		contents.eq(0).show();
+		var url = $(this).attr("href");
+		$.get(url,function(data) {
+			$("#canvas").html(data);
+			_clone_source();
+			SyntaxHighlighter.highlight($("#canvas"));
+		});					
+	});	
+
+	function _clone_source(){
+		var html = $("div._markup").html();
+		var css = $("style._css").html();
+		var js = $("script._js").html();
+		$(".clone_html").text(html);
+		$(".clone_css").text(css);
+		$(".clone_js").text(js);
+	}
+});
+</script>
